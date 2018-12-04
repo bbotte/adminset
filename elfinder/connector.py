@@ -3,8 +3,8 @@ from django.utils.translation import ugettext as _
 from elfinder.exceptions import ElfinderErrorMessages, VolumeNotFoundError, DirNotFoundError, FileNotFoundError, NamedError, NotAnImageError
 from elfinder.utils.volumes import instantiate_driver
 import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")#fix ascii code bug
+#reload(sys)
+#sys.setdefaultencoding("utf-8")#fix ascii code bug
 from collections import defaultdict
 
 class ElfinderConnector:
