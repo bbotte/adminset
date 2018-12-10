@@ -4,14 +4,14 @@ try:
 except ImportError:
     import Image
 from base64 import b64encode, b64decode
-#from string import maketrans
 from tarfile import TarFile
 from django.core.cache import cache
 from django.utils.translation import ugettext as _
 from elfinder.exceptions import ElfinderErrorMessages, FileNotFoundError, DirNotFoundError, PermissionDeniedError, NamedError, NotAnImageError
 from elfinder.utils.archivers import ZipFileArchiver
 
-maketrans = str.maketrans
+#from string import maketrans  #python 2.7
+maketrans = str.maketrans      #python 3.6
 
 class ElfinderVolumeDriver(object):
     """
